@@ -1,23 +1,20 @@
 
-import { useState } from "react";
-import { Link,  } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate,  } from "react-router-dom";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa6";
-// import { AuthContext } from "../Provider/Auth";
-// import Swal from "sweetalert2";
-// import Google from "../Google/Google";
-// import SecureAxios from "../../Axios/SecureAxios/SecureAxios";
+import { AuthContext } from "../../Provider/Authcontext/Authcontext";
+import Swal from "sweetalert2";
+
 
 
 const SignupForm = () => {
   const [view, setView] = useState(true);
   const [views, setViews] = useState(true);
-//   const { singup } = useContext(AuthContext);
-// const axios= SecureAxios();
+  const { singup } = useContext(AuthContext);
 
-// const location = useLocation();
-// const navigate = useNavigate();
-
-// const from = location.state || '/';
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state || '/';
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -48,25 +45,21 @@ const SignupForm = () => {
         return;
       }
 
-    // singup(formData.email,formData.password)
-    // .then(() => {
-    //      const userInfos ={
-    //       email: formData.email,
-    //       name:formData.name
-    //      }
+    
+      singup(formData.email,formData.password)
+      .then(() => {
            
-    //   axios.post('/user',userInfos)
-
-    //     Swal.fire({
-    //       title: `${formData.email} signed up successfully!`,
-    //       icon: "success",
-    //       draggable: true,
-    //     });
-    //     navigate(from)
-
-    //   })
-   
-    // Backend logic goes here
+             
+  
+  
+          Swal.fire({
+            title: `${formData.email} signed up successfully!`,
+            icon: "success",
+            draggable: true,
+          });
+          navigate(from)
+  
+        })
   };
 
   return (
@@ -146,7 +139,7 @@ const SignupForm = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-[#a712e4] border-2 border-solid border-orange-300 text-white py-2 rounded-tr-4xl rounded-bl-4xl  hover:bg-teal-800 transition"
+            className="w-full bg-[#a712e4] border-2 border-solid border-orange-300 text-white py-2 rounded-tr-4xl rounded-bl-4xl   transition"
           >
             Sign Up
           </button>

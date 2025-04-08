@@ -1,49 +1,49 @@
 
 import { FaEye, FaRegEyeSlash } from 'react-icons/fa6';
-import { Link,  } from 'react-router-dom';
+import { Link, useLocation, useNavigate,  } from 'react-router-dom';
 
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../Provider/Authcontext/Authcontext';
+import Swal from 'sweetalert2';
 const Login = () => {
      const [view,setview]=useState(true);
-    // const {login}=useContext(AuthContext)
-    // const location = useLocation();
-    // const navigate = useNavigate();
-    
-    // const from = location.state || '/';
-    // const axios = SecureAxios()
+     const {login}=useContext(AuthContext)
+     const location = useLocation();
+     const navigate = useNavigate();
+      
+     const from = location.state || '/';
+
     const HandleLogin = (e) => {
      
       e.preventDefault();
       const email = e.target.email.value;
       const password = e.target.password.value; 
-      console.log(email,password);
+     
+      login(email, password)
+      .then(result => {
+          Swal.fire({
+              title: `${result.user.email} logged in successfully!`,
+              icon: "success",
+              draggable: true,
+          });
+          
+          navigate(from)
+      })
+      .catch(error => {
+          Swal.fire({
+              title: "Login Failed",
+              text: error.message,
+              icon: "error",
+              draggable: true,
+          });
+      });
       
     
       
      
        
-      // login(email, password)
-      // .then(result => {
-      //     Swal.fire({
-      //         title: `${result.user.email} logged in successfully!`,
-      //         icon: "success",
-      //         draggable: true,
-      //     });
-      //   //   const user={
-      //   //     email:result.user.email
-      //   //   }
-      //   // //   axios.post('/user',user)
-      //     navigate(from)
-      // })
-      // .catch(error => {
-      //     Swal.fire({
-      //         title: "Login Failed",
-      //         text: error.message,
-      //         icon: "error",
-      //         draggable: true,
-      //     });
-      // });
+     
   };
   
     return (
@@ -92,7 +92,7 @@ className="w-full p-2 border border-gray-300 rounded mt-1"
     
               {/* Login Button */}
               <div className="form-control mt-6">
-                <button disabled={false} className='uppercase btn-block   btn text-white  bg-[#a712e4] border-2 border-solid border-orange-300 rounded-tr-4xl rounded-bl-4xl '>Login</button>
+                <button disabled={false} className='uppercase btn-block   btn text-white  bg-[#a712e4]  border-2 border-solid border-orange-300 rounded-tr-4xl rounded-bl-4xl '>Login</button>
               </div>
             </form>
             <div>

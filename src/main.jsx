@@ -21,6 +21,7 @@ import Contack from './Pages/Contack/Contack';
 import Blog from './Pages/Blog/Blog';
 import Login from './Pages/Login/Login';
 import SignupForm from './Pages/SingUp/Singup';
+import AuthProvider from './Provider/AuthProvider/AuthProvider';
 
 
 // Create a client
@@ -77,6 +78,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
 <StrictMode>
 <QueryClientProvider  client={queryClient}>
+<AuthProvider>
 <div
     style={{
       background: "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 100%, rgba(0,212,255,1) 100%)",
@@ -87,6 +89,7 @@ createRoot(document.getElementById('root')).render(
   >
     <RouterProvider router={router} />
   </div>
+</AuthProvider>
 </QueryClientProvider>
 
  
