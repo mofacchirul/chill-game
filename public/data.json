@@ -1,0 +1,51 @@
+[
+    {
+      "img": "https://i.ibb.co.com/dJzqnrDd/player-1.webp",
+      "playerName": "ShadowHunter",
+      "title": "Assassin Master",
+      "level": 45,
+      "description": "ShadowHunter is a silent assassin, striking from the shadows with unmatched precision. His speed and stealth make him deadly in close combat and difficult to detect.",
+      "details": "He excels in night operations, using dual blades and shadow cloaking. ShadowHunter leads covert missions for the Black Fang guild and is feared by enemy clans."
+    },
+    {
+      "img": "https://i.ibb.co.com/LDVCTkJz/player-2.webp",
+      "playerName": "BlazeKnight",
+      "title": "Fire Warrior",
+      "level": 50,
+      "description": "BlazeKnight harnesses fire’s raw power to overwhelm foes. His fiery aura burns nearby enemies while his sword ignites with flames during every battle strike.",
+      "details": "He has mastered all fire-based spells, leading fire raids with intense aggression. BlazeKnight once cleared the Flame Temple solo and is the guild’s top damage dealer."
+    },
+    {
+      "img": "https://i.ibb.co.com/60nG7ngp/player-3.webp",
+      "playerName": "IceQueen",
+      "title": "Frost Mage",
+      "level": 42,
+      "description": "IceQueen uses powerful ice magic to freeze enemies and slow down battles. Her control of temperature can shift tides in both duels and war zones.",
+      "details": "She casts wide-range frost storms and ice barriers to trap foes. IceQueen leads PvP events with strategy, making her a tactical leader in ranked matches."
+    },
+    {
+      "img": "https://i.ibb.co.com/WNjL9q3F/player-4.webp",
+      "playerName": "RogueTitan",
+      "title": "Heavy Tank",
+      "level": 48,
+      "description": "RogueTitan is a massive frontline defender with unmatched resilience. His armor absorbs major damage, making him the ultimate shield for his team in raids.",
+      "details": "He uses giant hammers and taunts enemies to protect allies. Known for solo tanking bosses, RogueTitan is respected across the kingdom’s toughest dungeons and arenas."
+    },
+    {
+      "img": "https://i.ibb.co.com/fV6TGDd9/player-5.webp",
+      "playerName": "WindWalker",
+      "title": "Speed Archer",
+      "level": 39,
+      "description": "WindWalker is a lightning-fast archer with deadly precision. Her arrows travel like gusts, hitting multiple targets before they even realize she's there.",
+      "details": "She specializes in hit-and-run tactics and evasive maneuvers. WindWalker trains in the Sky Forest and often assists squads with critical ranged support during siege battles."
+    },
+    {
+      "img": "https://i.ibb.co.com/V0T6Gj1D/player-6.webp",
+      "playerName": "StormBreaker",
+      "title": "Thunder Warrior",
+      "level": 47,
+      "description": "StormBreaker channels electric energy through his weapons, delivering high-voltage strikes. His lightning attacks stun enemies, disrupting formations and leaving them vulnerable.",
+      "details": "He commands the Thunder Guard and rides into battle with electrified gear. StormBreaker thrives in stormy zones and leads elite missions in high-risk territories."
+    }
+  ]
+  
