@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate,  } from "react-router-dom";
 import { FaEye, FaRegEyeSlash } from "react-icons/fa6";
 import { AuthContext } from "../../Provider/Authcontext/Authcontext";
 import Swal from "sweetalert2";
+import Google from "../Google/Google";
 
 
 
@@ -91,7 +92,7 @@ const SignupForm = () => {
               placeholder="Enter your email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border  border-gray-300 rounded mt-1"
               required
             />
           </div>
@@ -104,7 +105,7 @@ const SignupForm = () => {
               placeholder="Enter password"
               value={formData.password}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border  border-gray-300 rounded mt-1"
               required
             />
             <button
@@ -126,7 +127,7 @@ const SignupForm = () => {
               placeholder="Confirm password"
               value={formData.confirmPassword} // Correct value binding
               onChange={handleChange}
-              className="w-full p-2 border border-gray-300 rounded mt-1"
+              className="w-full p-2 border  border-gray-300 rounded mt-1"
               required
             />
             <button
@@ -145,7 +146,7 @@ const SignupForm = () => {
           </button>
 
           <div>
-            {/* <Google></Google> */}
+            <Google></Google>
           </div>
           <div className="text-center">
             <h3 className="text-xl text-orange-300 font-semibold">

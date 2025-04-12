@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         path:'blog/:id',
         element:<BlogDetels>
         </BlogDetels>,
-        loader:({params})=>fetch(`http://localhost:5000/blog/${params.id}`)
+        loader:({params})=>fetch(`https://chill-game-server-sigma.vercel.app/blog/${params.id}`)
       },
       {
         path:'/match',
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
       {
         path:'/players_detels/:id',
         element:<Players_detels></Players_detels>,
-        loader:({params})=>fetch(`http://localhost:5000/player/${params.id}`)
+        loader:({params})=>fetch(`https://chill-game-server-sigma.vercel.app/player/${params.id}`)
       },
       {
      path:'blog',

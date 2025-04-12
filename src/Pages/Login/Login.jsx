@@ -6,6 +6,7 @@ import { Link, useLocation, useNavigate,  } from 'react-router-dom';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/Authcontext/Authcontext';
 import Swal from 'sweetalert2';
+import Google from '../Google/Google';
 const Login = () => {
      const [view,setview]=useState(true);
      const {login}=useContext(AuthContext)
@@ -96,7 +97,7 @@ className="w-full p-2 border border-gray-300 rounded mt-1"
               </div>
             </form>
             <div>
-            {/* <Google></Google> */}
+            <Google></Google>
           </div>
                   <div className='text-center'>
                           <h3 className='text-xl text-orange-300 font-semibold'>Create your accountt</h3>

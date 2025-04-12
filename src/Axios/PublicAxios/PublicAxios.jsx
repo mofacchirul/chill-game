@@ -4,7 +4,7 @@ import React from 'react';
 const PublicAxios = () => {
           
     const PublicAxios = axios.create({
-        baseURL:"http://localhost:5000"
+        baseURL:"https://chill-game-server-sigma.vercel.app"
     })
 
     return PublicAxios;

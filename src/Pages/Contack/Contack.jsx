@@ -11,7 +11,7 @@ const Contack = () => {
                 descriptions={"Contack Us"}>
               
             </BannerHook>
-            <div class="bg-[#0a0220] py-12 ">
+            <div class=" py-12 ">
   <div class="max-w-6xl mx-auto grid grid-cols-1   md:grid-cols-3 gap-8 px-4 text-white">
     {/* <!-- Email --> */}
     <div class="bg-[#160c35] w-96 lg:w-full mx-auto  rounded-lg p-6 text-center relative overflow-hidden">

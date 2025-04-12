@@ -1,15 +1,37 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../Provider/Authcontext/Authcontext';
 
 const Navbar = () => {
+  const { user, signOutUser } = useContext(AuthContext);
     const [isOpen, setIsOpen] = useState(false);
     const links=
     <>
-    <li className='font-bold'><NavLink to={'/'}>Home</NavLink></li>
-    <li className='font-bold'><NavLink to={'/match'}>Match</NavLink></li>
-    <li className='font-bold'><NavLink to={'/Player'}>Players</NavLink></li>
-    <li className='font-bold'><NavLink to={'/blog'}>Blog</NavLink></li>
-    <li className='font-bold'><NavLink to={'/contack'}>Contack</NavLink></li>
+    <li className='font-bold'><NavLink    to={'/'}  className={({ isActive }) =>
+            isActive
+              ? 'bg-[#a712e4] text-white px-3 py-1 rounded-full'
+              : ''
+          }>Home</NavLink></li>
+    <li className='font-bold'><NavLink   to={'/match'}  className={({ isActive }) =>
+            isActive
+              ? 'bg-[#a712e4] text-white px-3 py-1 rounded-full'
+              : ''
+          }>Match</NavLink></li>
+    <li className='font-bold'><NavLink   to={'/Player'}  className={({ isActive }) =>
+            isActive
+              ? 'bg-[#a712e4] text-white px-3 py-1 rounded-full'
+              : ''
+          }>Players</NavLink></li>
+    <li className='font-bold'><NavLink   to={'/blog'}  className={({ isActive }) =>
+            isActive
+              ? 'bg-[#a712e4] text-white px-3 py-1 rounded-full'
+              : ''
+          }>Blog</NavLink></li>
+    <li className='font-bold'><NavLink   to={'/contack'}  className={({ isActive }) =>
+            isActive
+              ? 'bg-[#a712e4] text-white px-3 py-1 rounded-full'
+              : ''
+          }>Contack</NavLink></li>
          
     </>
     return (
@@ -27,9 +49,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end  space-x-3">
-<Link to={'/login'}>
-<button className="btn bg-[#a712e4] border-4 rounded-3xl text-white border-solid border-orange-300">Sing In</button>
+    {
+      user ? (
+        <>
+          <button onClick={signOutUser} className="btn bg-[#a712e4] border-4 rounded-3xl text-white border-solid border-orange-300">
+                Sign Out
+              </button>
+        </>
+      )
+      :
+      (
+        <>
+        <Link to={'/login'}>
+<button className="btn bg-[#a712e4] border-4 rounded-3xl text-white border-solid border-orange-300">Singin</button>
 </Link>
+        </>
+      )
+    }
+
     <div className="">
       <div className="dropdown"  onClick={() => setIsOpen(!isOpen)}>
         {/* Menu Button */}

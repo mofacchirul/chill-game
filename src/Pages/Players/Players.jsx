@@ -18,8 +18,8 @@ const Players = () => {
         }
 
     return (
-        <div className=" py-8 md:py-12 lg:py-16 px-3 lg:px-0">
-           <BannerHook titel={'Players'} descriptions={'Players'} ></BannerHook>
+        <div className=" ">
+           <BannerHook titel={'Players'} descriptions={'Players '} ></BannerHook>
               <div className="grid max-w-5xl mx-auto grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10 mb-10">
                 {
                  Players?.map((player, index) => (
